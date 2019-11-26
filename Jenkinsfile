@@ -11,7 +11,13 @@ pipeline {
                     }
                 }
                 stages {
+
                     stage('Build') {
+                        agent {
+                            docker {
+                                image "${PLATFORM}"
+                            }
+                        }
                         steps {
                             sh "echo \"Do Build for ${PLATFORM}\""
                         }
