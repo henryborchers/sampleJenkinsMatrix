@@ -12,7 +12,7 @@ pipeline {
                 axes {
                     axis {
                         name 'PLATFORM'
-                        values 'ci/jenkins/docker/centos6/Dockerfile', 'ci/jenkins/docker/centos7/Dockerfile', "ci/jenkins/docker/centos8/Dockerfile", "ci/jenkins/docker/fedora31/Dockerfile", "ci/jenkins/docker/ubuntu1604/Dockerfile" ,"ci/jenkins/docker/ubuntu1804/Dockerfile"
+                        values 'ci/jenkins/docker/build/centos6/Dockerfile', 'ci/jenkins/docker/build/centos7/Dockerfile', "ci/jenkins/docker/build/centos8/Dockerfile", "ci/jenkins/docker/build/fedora31/Dockerfile", "ci/jenkins/docker/build/ubuntu1604/Dockerfile" ,"ci/jenkins/docker/build/ubuntu1804/Dockerfile"
                     }
                 }
                 stages {
