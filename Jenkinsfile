@@ -3,7 +3,12 @@ pipeline {
     stages {
         stage('BuildAndTest') {
             matrix {
-                agent any
+                agent {
+                    docker {
+                        image "${PLATFORM}"
+                        label 'linux && docker'
+                    }
+                }
                 axes {
                     axis {
                         name 'PLATFORM'
@@ -13,12 +18,7 @@ pipeline {
                 stages {
 
                     stage('Build') {
-                        agent {
-                            docker {
-                                image "${PLATFORM}"
-                                label 'linux && docker'
-                            }
-                        }
+                        
                         steps {
                             sh "echo \"Do Build for ${PLATFORM}\""
                         }
