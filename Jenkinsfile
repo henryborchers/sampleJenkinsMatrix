@@ -20,7 +20,7 @@ pipeline {
                     stage('Build') {
                         
                         steps {
-                            sh "cat /etc/os-release"
+                            sh "cat /etc/*release"
                         }
                     }
                     stage('Test') {
