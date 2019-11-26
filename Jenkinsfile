@@ -20,7 +20,7 @@ pipeline {
                     stage('Build') {
                         
                         steps {
-                            sh "echo \"Do Build for ${PLATFORM}\""
+                            sh "cat /etc/os-release"
                         }
                     }
                     stage('Test') {
