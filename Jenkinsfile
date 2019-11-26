@@ -7,22 +7,18 @@ pipeline {
                 axes {
                     axis {
                         name 'PLATFORM'
-                        values 'linux', 'windows', 'mac'
-                    }
-                    axis {
-                        name 'BROWSER'
-                        values 'firefox', 'chrome', 'safari', 'edge'
+                        values 'ubuntu'
                     }
                 }
                 stages {
                     stage('Build') {
                         steps {
-                            sh "echo \"Do Build for ${PLATFORM} - ${BROWSER}\""
+                            sh "echo \"Do Build for ${PLATFORM}\""
                         }
                     }
                     stage('Test') {
                         steps {
-                            echo "Do Test for ${PLATFORM} - ${BROWSER}"
+                            echo "Do Test for ${PLATFORM}"
                         }
                     }
                 }
