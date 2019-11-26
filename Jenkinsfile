@@ -26,7 +26,7 @@ pipeline {
                     }
                     stage('Test') {
                         steps {
-                            echo "Do Test for ${PLATFORM}"
+                            cmakeBuild buildDir: 'build', installation: 'InSearchPath'
                         }
                     }
                 }
