@@ -16,6 +16,7 @@ pipeline {
                         agent {
                             docker {
                                 image "${PLATFORM}"
+                                label 'linux && docker'
                             }
                         }
                         steps {
